@@ -38,3 +38,23 @@ Handling Missing Values: To ensure the dataset is complete and ready for analysi
     missing_df = pd.DataFrame(missing_df)
     df.dropna(subset=['reviewText'], inplace=True)
     return missing_df
+```
+
+Duplicates: We used the "duplicated()" method in pandas to identify duplicate rows in the dataset. This method checks for duplicate entries based on the specified columns. In this case, we checked for duplicates in the "reviewText" column to ensure each review text is unique.
+```df.drop_duplicates(subset=['reviewText'], inplace=True)
+```
+![image](https://github.com/user-attachments/assets/a6ee5cd7-bc46-47fc-b2a5-33d6f9f9e990)
+
+#### Text Preprocessing
+This is a step in preparing the review text for sentiment analysis. this steps involved: lowercasing, removing special characters,tokenization, etc.
+```rt = lambda x: re.sub('[^a-zA-Z]', '', str(x))
+df["reviewText"] = df["reviewText"].map(rt)
+df["reviewText"] = df["reviewText"].str.lower()
+df["reviewText"] = df["reviewText"].apply(lambda x: x.split())
+df.head()
+```
+![image](https://github.com/user-attachments/assets/7979c935-056a-4486-abb3-bfed061cf2d5)
+![image](https://github.com/user-attachments/assets/de43af26-c6f9-4bb1-97a7-f5cfc7a3f5e5)
+
+
+
