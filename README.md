@@ -29,11 +29,12 @@ The dataset was downloaded from Kaggle and the specific dataset used is the "Ama
 ### DATA PREPROCESSING
 It involves cleaning and transforming the data to ensure it is in a suitable format for further analysis.
 #### Data Cleaning
-Handling Missing Values: To ensure the dataset is complete and ready for analysis, we addressed missing "isnull" method in pandas and removed the rows with missing values in critical columns like "reviewText". This ensuresthat only complet reviews are included.
+Handling Missing Values: To ensure the dataset is complete and ready for analysis, we addressed missing values using "isnull" method in pandas and removed the rows with missing values in critical columns like "reviewText". This ensuresthat only complet reviews are included.
 ```def missing_values_analysis(df):
     na_columns_ = [col for col in df.columns if df[col].isnull().sum() > 0]
     n_miss = df[na_columns_].isnull().sum().sort_values(ascending=True)
     ratio_ = (df[na_columns_].isnull().sum() / df.shape[0]* 100).sort_values(ascending=True)
     missing_df = pd.concat([n_miss, np.round(ratio_, 2)], axis =1, keys=["Missing Values", "Ratio"])
     missing_df = pd.DataFrame(missing_df)
+    df.dropna(subset=['reviewText'], inplace=True)
     return missing_df
