@@ -56,5 +56,35 @@ df.head()
 ![image](https://github.com/user-attachments/assets/7979c935-056a-4486-abb3-bfed061cf2d5)
 ![image](https://github.com/user-attachments/assets/de43af26-c6f9-4bb1-97a7-f5cfc7a3f5e5)
 
+### EXPLORATORY DATA ANALYSIS
+To visualize the distribution of categorical variables, we used the following function to create count plots and pie charts:
+```def categorical_variable_summary(df, column_name):
+    fig = make_subplots(rows=1, cols=2,
+                        subplot_titles=('Countplot', 'Percentage'),
+                        specs=[[{'type': 'xy'}, {'type': 'domain'}]])
 
+    fig.add_trace(go.Bar(y=df[column_name].value_counts().values.tolist(),
+                         x=[str(i) for i in df[column_name].value_counts().index],
+                         text=df[column_name].value_counts().values.tolist(),
+                         textposition='auto',
+                         name=column_name,
+                         marker=dict(color='brown'))),  
+    fig.add_trace(go.Pie(labels=df[column_name].value_counts().keys(),
+                         values=df[column_name].value_counts().values,
+                         textfont=dict(size=18),
+                         name=column_name,
+                         marker=dict(colors=['sandybrown', 'chocolate', 'Tan', 'lightbrown', 'darkbrown'])),  
+                  row=1, col=2) 
+
+    fig.update_layout(title_text=f'{column_name} Summary',
+                      annotations=[dict(text='Countplot', x=0.2, y=0.5, font_size=12, showarrow=False),
+                                   dict(text='Percentage', x=0.8, y=0.5, font_size=12, showarrow=False)])
+    fig.show()
+
+ 
+data = { 'overall': [1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5] } 
+df = pd.DataFrame(data)
+```
+The above function creates a count plot and a pie chart to display the distribution and percentage of each category in the specified column. The visualizations help us understand the distribution of ratings in the dataset.
+![image](https://github.com/user-attachments/assets/125393e9-84e9-4d10-94f2-2509e8cf1cf7)
 
