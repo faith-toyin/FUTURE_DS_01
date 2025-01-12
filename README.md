@@ -112,3 +112,6 @@ for index, row in df['reviewText'].items():
 ```
 ![image](https://github.com/user-attachments/assets/ccd350cd-86c4-491f-bb7f-6c2a52cc0a13)
 
+
+### DATA VISUALIZATION
+![image](https://github.com/user-attachments/assets/c39d7aa5-687c-4e4d-bbd6-2cdf894d3987)
