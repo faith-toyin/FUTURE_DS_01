@@ -88,3 +88,27 @@ df = pd.DataFrame(data)
 The above function creates a count plot and a pie chart to display the distribution and percentage of each category in the specified column. The visualizations help us understand the distribution of ratings in the dataset.
 ![image](https://github.com/user-attachments/assets/125393e9-84e9-4d10-94f2-2509e8cf1cf7)
 
+### SENTIMENT ANALYSIS
+This helps us determine the sentiment or emotion expressed in a piece of text. It helps in understanding customer feedback by classifying reviews as positive, negative, or neutral. This analysis provides valuable insights into customer opinions and experiences, allowing businesses to identify strengths and areas for improvement.
+```from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+from textblob import TextBlob
+
+analyzer = SentimentIntensityAnalyzer()
+df[['polarity', 'subjectivity']] = df['reviewText'].apply(lambda Text:pd.Series(TextBlob(Text).sentiment))
+
+for index, row in df['reviewText'].items():
+
+    score = SentimentIntensityAnalyzer().polarity_scores(row)
+
+    neg = score['neg']
+    neu = score['neu']
+    pos = score['pos']
+    if neg>pos:
+        df.loc[index, 'sentiment'] = "Negative"
+    elif pos > neg:
+        df.loc[index, 'sentiment'] = "Positive"
+    else:
+        df.loc[index, 'sentiment'] = "Neutral"
+```
+![image](https://github.com/user-attachments/assets/ccd350cd-86c4-491f-bb7f-6c2a52cc0a13)
+
