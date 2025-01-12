@@ -15,3 +15,9 @@
  * Review Text- The text of the customer review.
 * Rating- The star rating given by the customer (1 to 5 stars).
 * Review Date- The date when the review was posted.
+* Reviewer Name- the names of the reviewers who posted the reviews. 
+* Review Time- it indicates the date when the review was posted. 
+* Day Difference (day_diff)- This represents the difference in days between the review date and a reference date.
+* Score Positive-Negative Difference (score_pos_neg_diff)- This calculates the difference between the number of helpful votes (positive) and unhelpful votes (negative) for a review. 
+* Score Average Rating (score_average_rating)-This represents the average rating given by the reviewer. 
+* Wilson Lower Bound (wilson_lower_bound)- This calculates the lower bound of the Wilson score interval for the helpfulness of the review.
