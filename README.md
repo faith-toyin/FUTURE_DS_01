@@ -1,13 +1,13 @@
 ## Amazon Customer Sentiment Analysis
 
 ### CONTENT:
-  1. [INTRODUCTION](introduction)
-2. DATA COLLECTION
-3. DATA PREPROCESSING
-4. EXPLORATORY DATA ANALYSIS
-5. SENTIMENT ANALYSIS
-6. DATA VISUALIZATION
-7. SUMMARY
+  1. [INTRODUCTION](#introduction)
+2. [DATA COLLECTION](#data-collection)
+3. [DATA PREPROCESSING](#data-preprocessing)
+4. [EXPLORATORY DATA ANALYSIS](#exploratory-data-analysis)
+5. [SENTIMENT ANALYSIS](#sentiment-analysis)
+6. [DATA VISUALIZATION](#data-visualization)
+7. [SUMMARY](#summary)
 
  
  ### INTRODUCTION
