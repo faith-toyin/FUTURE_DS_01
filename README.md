@@ -1,7 +1,7 @@
 ## Amazon Customer Sentiment Analysis
 
 ### CONTENT:
-  1. INTRODUCTION
+  1. [INTRODUCTION](introduction)
 2. DATA COLLECTION
 3. DATA PREPROCESSING
 4. EXPLORATORY DATA ANALYSIS
@@ -115,3 +115,9 @@ for index, row in df['reviewText'].items():
 
 ### DATA VISUALIZATION
 ![image](https://github.com/user-attachments/assets/c39d7aa5-687c-4e4d-bbd6-2cdf894d3987)
+
+### SUMMARY
+The results of the sentiment analysis indicate that the majority of customer reviews are positive, with 81.6% of the reviews expressing positive sentiment. This suggests that most customers are satisfied with their purchases and have had good experiences.
+The negative sentiment accounts for 12.8% of the reviews, which is much lower than the positive sentiment. This indicates that while there are some dissatisfied customers, they are in the minority.
+The neutral sentiment makes up 5.6% of the reviews, showing that a small portion of customers have mixed or indifferent feelings about their purchases.
+Overall, the results suggest that the product or service being reviewed is generally well-received by customers, with a high level of satisfaction. However, it is important to address the concerns of the minority of customers who have expressed negative sentiment as well as the neutral customers to further improve customer satisfaction and loyalty.
