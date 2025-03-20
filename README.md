@@ -6,8 +6,7 @@
 3. [DATA PREPROCESSING](#data-preprocessing)
 4. [EXPLORATORY DATA ANALYSIS](#exploratory-data-analysis)
 5. [SENTIMENT ANALYSIS](#sentiment-analysis)
-6. [DATA VISUALIZATION](#data-visualization)
-7. [SUMMARY](#summary)
+6. [SUMMARY](#summary)
 
  
  ### INTRODUCTION
@@ -112,9 +111,6 @@ for index, row in df['reviewText'].items():
 ```
 ![image](https://github.com/user-attachments/assets/ccd350cd-86c4-491f-bb7f-6c2a52cc0a13)
 
-
-### DATA VISUALIZATION
-![image](https://github.com/user-attachments/assets/c39d7aa5-687c-4e4d-bbd6-2cdf894d3987)
 
 ### SUMMARY
 The results of the sentiment analysis indicate that the majority of customer reviews are positive, with 81.6% of the reviews expressing positive sentiment. This suggests that most customers are satisfied with their purchases and have had good experiences.
